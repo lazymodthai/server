@@ -5,7 +5,7 @@ const bodyParse = require('body-parser')
 const connectDB = require('./Config/db')
 const app = express();
 
-// connectDB()
+connectDB()
 
 app.use(morgan('dev'))
 app.use(cors())
@@ -15,6 +15,6 @@ const { readdirSync } = require("fs");
 
 readdirSync("./Routes").map((r) => app.use("/api", require("./Routes/" + r)));
 
-app.listen(5001, () =>
+app.listen(5000, () =>
   console.log("Server is running on http://localhost:5000")
 );
