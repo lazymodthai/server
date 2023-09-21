@@ -1,10 +1,10 @@
 const members = require("../Models/members");
 
-exports.read = async (req, res) => {
+exports.readMember = async (req, res) => {
   res.send("This is Read");
 };
 
-exports.create = async (req, res) => {
+exports.createMember = async (req, res) => {
   try {
     console.log(req.body);
     const addMember = await members(req.body).save();
@@ -13,14 +13,14 @@ exports.create = async (req, res) => {
     console.log(err);
   }
 };
-exports.update = async (req, res) => {
+exports.updateMember = async (req, res) => {
   try {
     console.log('This is Update');
   } catch (err) {
     console.log(err);
   }
 };
-exports.remove = async (req, res) => {
+exports.removeMember = async (req, res) => {
   try {
     console.log('This is Remove');
   } catch (err) {

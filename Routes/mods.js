@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const { read, create, update, remove } = require("../Controllers/mods");
+const { readMod, createMod, updateMod, removeMod } = require("../Controllers/mods");
 
-router.get("/mods", read);
-router.post("/mods", create);
-router.put("/mods/:id", update);
-router.delete("/mods/:id", remove);
+router.get("/mods", readMod);
+router.post("/mods", createMod);
+router.put("/mods/:id", updateMod);
+router.delete("/mods/:id", removeMod);
 
 
 module.exports = router;

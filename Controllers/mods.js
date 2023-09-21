@@ -1,10 +1,10 @@
 const mods = require("../Models/mods");
 
-exports.read = async (req, res) => {
+exports.readMod = async (req, res) => {
   res.send("This is Read");
 };
 
-exports.create = async (req, res) => {
+exports.createMod = async (req, res) => {
   try {
     console.log(req.body);
     const addMod = await mods(req.body).save();
@@ -13,14 +13,14 @@ exports.create = async (req, res) => {
     console.log(err);
   }
 };
-exports.update = async (req, res) => {
+exports.updateMod = async (req, res) => {
   try {
     console.log('This is Update');
   } catch (err) {
     console.log(err);
   }
 };
-exports.remove = async (req, res) => {
+exports.removeMod = async (req, res) => {
   try {
     console.log('This is Remove');
   } catch (err) {
