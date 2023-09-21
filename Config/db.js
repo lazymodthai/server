@@ -1,9 +1,11 @@
 const mongoose = require('mongoose')
+const DBLINK = require('dotenv').config()
+const url = process.env.DBLINK
 
 const connectDB = async()=>{
     try{
         await mongoose
-        .connect('mongodb+srv://lazymodthai:kIbLJL85gF1UQZTQ@modthai.yn7gi44.mongodb.net/',{dbName: 'modthai'})
+        .connect(url,{dbName: 'modthai'})
         console.log('MongoDB connected');
     }catch (err){
         console.log(err);
