@@ -1,3 +1,6 @@
+import { Register } from "../Services/auth.service";
+
+var constants = require('./constants/status');
 const members = require("../Models/members");
 
 exports.readMember = async (req, res) => {
@@ -5,13 +8,13 @@ exports.readMember = async (req, res) => {
 };
 
 exports.createMember = async (req, res) => {
-  
   try {
-    console.log(req.body);
-    const addMember = await members(req.body).save();
-    res.send(addMember);
+    const addMember =  Register(req.body)
+    res.send(constants.STATUS_SUCCESS);
   } catch (err) {
     console.log(err);
+    //handle response error
+    res.send(err)
   }
 };
 exports.updateMember = async (req, res) => {
