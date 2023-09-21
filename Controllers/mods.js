@@ -1,4 +1,4 @@
-const members = require("../Models/members");
+const mods = require("../Models/mods");
 
 exports.read = async (req, res) => {
   res.send("This is Read");
@@ -7,8 +7,8 @@ exports.read = async (req, res) => {
 exports.create = async (req, res) => {
   try {
     console.log(req.body);
-    const addMember = await members(req.body).save();
-    res.send(addMember);
+    const addMod = await members(req.body).save();
+    res.send(addMod);
   } catch (err) {
     console.log(err);
   }
