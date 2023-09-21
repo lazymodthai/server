@@ -7,7 +7,7 @@ exports.read = async (req, res) => {
 exports.create = async (req, res) => {
   try {
     console.log(req.body);
-    const addMod = await members(req.body).save();
+    const addMod = await mods(req.body).save();
     res.send(addMod);
   } catch (err) {
     console.log(err);
