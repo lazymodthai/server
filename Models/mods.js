@@ -22,4 +22,4 @@ const modsSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("ทนกห", modsSchema);
+module.exports = mongoose.model("mods", modsSchema);
