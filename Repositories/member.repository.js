@@ -20,5 +20,4 @@ async function CreateMember(body) {
     return err;
   }
 }
-
-export {FindMemberBySomeThing,CreateMember}
+module.exports = { FindMemberBySomeThing,CreateMember };

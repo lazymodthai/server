@@ -1,4 +1,5 @@
-import { CreateMember } from "../Repositories/member.repository";
+
+const { CreateMember } = require("../Repositories/member.repository");
 async function Register(body){
     try {
         console.log(req.body);
@@ -10,4 +11,4 @@ async function Register(body){
       }
 }
 
-export {Register}
+module.exports = { Register };
