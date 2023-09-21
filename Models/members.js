@@ -2,34 +2,22 @@ const mongoose = require("mongoose");
 
 const membersSchema = mongoose.Schema(
   {
-    username: String,
-    password: String,
-    email: String,
+    username: {type: String, required: true},
+    password: {type: String, required: true},
+    email: {type: String, required: true},
     social: {
-      facebook: String,
-      discord: String,
-      website: String,
+      facebook: {type: String, default: null},
+      discord: {type: String, default: null},
+      website: {type: String, default: null},
     },
-    modder: Boolean,
-    modder_id: Number,
-    modder_name: String,
-    image: String,
+    modder: {type: Boolean, default: false},
+    modder_id: {type: Number, default: null},
+    modder_name: {type: String, default: null},
+    image: {type: String, default: null},
     last_login: {
       type: Date,
       default: null,
-    },
-    add_date: {
-      type: Date,
-      default: Date.now,
-    },
-    deleted_date: {
-      type: Date,
-      default: null,
-    },
-    last_update: {
-      type: Date,
-      default: null,
-    },
+    }
   },
   { timestamps: true }
 );
