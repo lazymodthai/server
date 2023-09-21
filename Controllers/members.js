@@ -5,6 +5,7 @@ exports.readMember = async (req, res) => {
 };
 
 exports.createMember = async (req, res) => {
+  
   try {
     console.log(req.body);
     const addMember = await members(req.body).save();
