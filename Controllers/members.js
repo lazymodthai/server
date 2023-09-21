@@ -1,6 +1,5 @@
-const { Register } = require("../Services/auth.service");
-const members = require("../Models/members");
-var {Constants} = require('../Constants');
+const { Register } = require("../services/auth.service");
+var {Constants} = require('../constants');
 
 
 exports.readMember = async (req, res) => {

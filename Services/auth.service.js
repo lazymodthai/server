@@ -1,5 +1,5 @@
 
-const { CreateMember } = require("../Repositories/member.repository");
+const { CreateMember } = require("../repositories/member.repository");
 async function Register(body){
     try {
         console.log(req.body);

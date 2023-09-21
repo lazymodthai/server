@@ -1,4 +1,4 @@
-const members = require("../Models/members");
+const members = require("../models/members");
 
 async function FindMemberBySomeThing(filter) {
   try {
