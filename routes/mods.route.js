@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { readMod, createMod, updateMod, removeMod } = require("../Controllers/mods");
+const { readMod, createMod, updateMod, removeMod } = require("../controllers/mods.controller");
 
 router.get("/mods", readMod);
 router.post("/mods", createMod);

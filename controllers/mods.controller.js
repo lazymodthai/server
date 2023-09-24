@@ -1,4 +1,4 @@
-const mods = require("../models/mods");
+const mods = require("../models/mods.model");
 
 exports.readMod = async (req, res) => {
   res.send("This is Read");
