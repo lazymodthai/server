@@ -9,11 +9,11 @@ exports.readMember = async (req, res) => {
 
 exports.createMember = async (req, res) => {
   try {
+    // Send body to auth service
     const addMember =  Register(req.body)
+    // Response
     res.send(addMember);
   } catch (err) {
-    console.log(err);
-    //handle response error
     res.send(err)
   }
 };
