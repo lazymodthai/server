@@ -10,7 +10,7 @@ async function FindMemberBySomeThing(filter) {
     return err;
   }
 }
-async function CreateMember(body) {
+async function saveMember(body) {
   try {
     const member = await members(body).save();
     return member;
@@ -20,4 +20,4 @@ async function CreateMember(body) {
     return err;
   }
 }
-module.exports = { FindMemberBySomeThing,CreateMember };
+module.exports = { FindMemberBySomeThing,saveMember };

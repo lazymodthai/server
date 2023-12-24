@@ -1,4 +1,4 @@
-const { CreateMember } = require("../repositories/members.repository");
+const { saveMember } = require("../repositories/members.repository");
 const Members = require("../models/members.model");
 async function Register(body) {
   try {
@@ -6,11 +6,11 @@ async function Register(body) {
     const user = await Members.findOne({ username });
     // Check username already exist
     if (user) {
-      console.log("This username has already exist")
+      return { error: "This username has already exist" };
     } else {
       // Create member
-      await CreateMember(body);
-      console.log("Create",body);
+      await saveMember(body);
+      return { successMessage: "Create member successfully" };
     }
   } catch (err) {
     console.log(err);
